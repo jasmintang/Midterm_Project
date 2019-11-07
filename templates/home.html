@@ -1,0 +1,21 @@
+<html>
+   <head>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link href="static/bootstrap.min.css" rel="stylesheet" media="screen">
+   </head>
+   <p>For Services, you can enter "translate", "rate", "adj", "noun", "positive", "negative"</p>
+   <body>
+      <div class="container">
+         <h1>Please Enter the Restaurant Name and Service: </h1>
+         
+         <form action="" method="post">
+            <input type="text" placeholder="Name" name="name" value="{{request.form.name}}">
+            <input type="text" placeholder="Service" name="service" value="{{request.form.service}}">
+            <input class="btn btn-default" type="submit" value="Submit">
+         </form>
+         {% if error %}
+            <p class="error"><strong>Error:</strong> {{ error }}</p>
+         {% endif %}
+      </div>
+   </body>
+</html>
