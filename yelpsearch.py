@@ -100,7 +100,7 @@ def yelpsearch():
                     key = []
                     key2 = []
                 
-                ## SERVICE 5: top 10 most common positive words
+                ## SERVICE 5: top 10 most positive words
                     if request.form['service'] == 'positive':
                         for i in __re_data:
                             key.append(i)
@@ -110,7 +110,7 @@ def yelpsearch():
                             key2.append(key[i])
                         return render_template('success.html',name=key2)
                 
-                ## SERVICE 6: top 10 most common negative words
+                ## SERVICE 6: top 10 most negative words
                     if request.form['service'] == 'negative':                    
                         for i in __re_data:
                             key.append(i)
